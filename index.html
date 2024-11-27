@@ -3,44 +3,44 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Loja Online - Carrinho de Compras</title>
+    <title>Loja de Produtos</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <h1>Loja de Produtos</h1>
 
-    <!-- Produtos -->
-    <div id="produtos">
-        <div class="produto">
-            <h3>Produto 1</h3>
-            <p>Descrição do produto 1</p>
+    <div class="product-container">
+        <div class="product" id="product1">
+            <img src="bolo1.jpg" alt="Produto 1">
+            <h3>Bolo 1</h3>
             <p>R$ 50,00</p>
-            <button class="add-to-cart" data-id="1" data-nome="Produto 1" data-preco="50">Adicionar ao Carrinho</button>
+            <button onclick="addToCart('Bolo 1', 50)">Adicionar ao Carrinho</button>
         </div>
-        <div class="produto">
-            <h3>Produto 2</h3>
-            <p>Descrição do produto 2</p>
-            <p>R$ 30,00</p>
-            <button class="add-to-cart" data-id="2" data-nome="Produto 2" data-preco="30">Adicionar ao Carrinho</button>
+
+        <div class="product" id="product2">
+            <img src="bolo2.jpg" alt="Produto 2">
+            <h3>Bolo 2</h3>
+            <p>R$ 70,00</p>
+            <button onclick="addToCart('Bolo 2', 70)">Adicionar ao Carrinho</button>
         </div>
-        <div class="produto">
-            <h3>Produto 3</h3>
-            <p>Descrição do produto 3</p>
-            <p>R$ 100,00</p>
-            <button class="add-to-cart" data-id="3" data-nome="Produto 3" data-preco="100">Adicionar ao Carrinho</button>
+
+        <div class="product" id="product3">
+            <img src="bolo3.jfif" alt="Produto 3">
+            <h3>Bolo 3</h3>
+            <p>R$ 90,00</p>
+            <button onclick="addToCart('Bolo 3', 90)">Adicionar ao Carrinho</button>
         </div>
     </div>
 
-    <h2>Carrinho de Compras</h2>
-    <div id="carrinho">
-        <p>Seu carrinho está vazio</p>
+    <div id="cart-icon" class="cart-icon" onclick="window.location.href = 'cart.html'">
+        <img src="carrinho.png" alt="Carrinho">
+        <span id="cart-count">0</span>
+
+        <!-- Exibir lista de produtos no carrinho ao passar o mouse -->
+        <div id="cart-tooltip" class="cart-tooltip">
+            <ul id="cart-products"></ul>
+        </div>
     </div>
 
-    <div id="total">
-        <p>Total: R$ 0,00</p>
-        <button id="finalizar-compra" style="display:none;">Finalizar Compra</button>
-    </div>
-
-    <script src="script.js"></script>
+    <script src="scripts.js"></script>
 </body>
 </html>
